@@ -1,0 +1,163 @@
+#contato{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+    background-color: var(--background-header-dark);
+}
+
+#contato h2{
+    font-size: 2.5rem;
+    font-family: 'kode mono';
+    margin: 100px 0px;
+    z-index: 1;
+}
+
+.form{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-color: #2e41809d ;
+    padding: 30px 40px;
+    border-radius: 3rem;
+    width: auto;
+}
+
+form{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: left;
+}
+
+form label{
+    margin: 20px 0px 10px 0px;
+    letter-spacing: 3px;
+    font-weight: 500;
+}
+
+form input{
+    width: 45vw;
+    height: 40px;
+    padding: 10px 30px;
+    border-radius: 2rem;
+    border: 1px solid transparent;
+    background-color: #2d4d779d;
+    color: var(--text-color-dark);
+    margin-bottom: 20px;
+}
+form input:invalid{
+    border-color:rgb(180, 5, 34);;
+}
+
+form input:focus{
+    outline: 1px solid transparent;
+}
+
+form #email:invalid ~ .email_invalid{
+    display: block;
+}
+
+form span{
+    font-weight: 500;
+    font-size: 0.7rem;
+    text-transform: capitalize;
+    color: rgb(180, 5, 34);
+    margin: 5px;
+    letter-spacing: 2px;
+    display: none;
+}
+
+form textarea{
+    width: 45vw;
+    height: 200px;
+    padding: 10px 30px;
+    border-radius: 2rem;
+    border: 1px solid transparent;
+    background-color: #2d4d779d;
+    color: var(--text-color-dark);
+    margin-bottom: 20px;
+}
+
+form textarea:focus{
+    outline: 1px solid transparent;
+}
+
+form button{
+    text-transform: uppercase;
+    font-weight: bold;
+    font-size: 1rem;
+    letter-spacing: 0.2rem;
+    color: var(--text-color-dark);
+    margin: 40px 0px;
+    text-decoration: none;
+
+    background: linear-gradient(45deg,#042075 0% ,#01164e 20%,transparent 50%);
+    background-size: 250%;
+    padding: 16px 40px;
+    border-radius: 50px;
+    outline: 2px solid transparent;
+    background-repeat: no-repeat;
+
+    transition: all 1s;
+    
+}
+
+form button:hover{
+    background-size: 0%;
+    background-repeat: no-repeat;
+    outline: 2px solid  var(--secondary-color);
+}
+
+.social-div{
+    margin-bottom: 100px;
+    width: 300px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: center;
+}
+
+
+.social-div a{
+    color: var(--text-color-dark);
+}
+
+.social-div i{
+    font-size: 2rem;
+    padding: 10px 13px;
+    border-radius: 50%;
+}
+
+.social-div i:hover{
+    background-color: #f1f1f1;
+    color: #01164e;
+}
+
+
+@media only screen and (max-width: 772px){
+    form input{
+        width: 65vw;
+    }
+
+    form textarea{
+        width: 65vw;
+    }
+
+    #contato h2{
+        font-size: 2rem;
+        margin: 70px 40px;
+        text-align: center;
+    }
+
+    .social-div{
+        width: 40vw;
+    }
+}
+
+@media only screen and (max-width: 451px){
+    .social-div{
+        width: 60vw;
+    }
+}

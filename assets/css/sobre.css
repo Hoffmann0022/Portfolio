@@ -1,0 +1,111 @@
+#sobre{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    
+    position: relative;
+    padding-bottom: 100px;
+    border-bottom: 2px solid var(--tertiary-color);
+    background: linear-gradient(-45deg, var(--background-header-dark) 30%, var(--primary-color-dark) 40%,var(--secondary-color) );
+    background-size: 400% 400%;
+    animation: gradient 10s ease infinite alternate;
+}
+
+/* Animação do fundo gradiente */
+@keyframes gradient {
+    0%{
+        background-position: 0% 25%;
+    }
+    25%{
+        background-position: 50% 50%;
+    }
+    50%{
+        background-position: 100% 100%;
+    }
+    75%{
+        background-position: 50% 50%;
+    }
+    100%{
+        background-position: 0% 25%;
+    }
+}
+
+#sobre h2{
+    font-size: 2.5rem;
+    font-family: 'kode mono';
+    margin: 100px 0px;
+    z-index: 1;
+}
+
+#sobre::before{
+    content: "";
+    width: 100%;
+    height: 100px;
+    position: absolute;
+    top: 0;
+    background: linear-gradient( var(--background-header-dark) 0%, transparent 100%);
+}
+
+#sobre::after{
+    content: "";
+    width: 100%;
+    height: 100px;
+    position: absolute;
+    bottom: 0;
+    background: linear-gradient( transparent, var(--background-header-dark));
+}
+
+.cursos{
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    gap: 50px;
+    z-index: 1;
+}
+
+.formacao{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    z-index: 1;
+    margin: 20px 50px;
+}
+
+
+.formacao img{
+    width: 70px;
+    margin-right: 20px;
+}
+
+.formacao p{
+    margin-bottom: 5px;
+    font-size: .8rem;
+    font-weight: 300;
+    letter-spacing: 3px;
+    filter: opacity(.7);
+}
+
+.formacao h4{
+    font-weight: 600;
+    letter-spacing: 5px;
+    margin-bottom: 10px;
+}
+
+.cursos .formacao a{
+    color: var(--text-color-dark);
+    text-decoration: none;
+}
+
+.cursos .formacao a:hover{
+    text-decoration: underline;
+}
+
+@media only screen and (max-width: 772px){
+    #sobre h2{
+        font-size: 2rem;
+        margin: 70px 40px;
+        text-align: center;
+    }
+}

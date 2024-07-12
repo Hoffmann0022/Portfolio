@@ -1,0 +1,106 @@
+header{
+    background-color: var(--background-header-dark);
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+    padding: 20px 0px;
+    position: fixed;
+    top: 0;
+    z-index: 10;
+    width: 100%;
+    transition: all .4s ease-in-out;
+}
+
+nav ul{
+    list-style: none;
+    display: flex;
+    align-items: center;
+}
+
+nav ul li a{
+    text-decoration: none;
+    color: var(--text-color-dark);
+    padding: 0px 60px;
+    font-size: 1rem;
+    transition: all .3s ease-in-out;
+}
+
+nav ul li a:hover{
+    text-decoration: underline;
+}
+
+.menu{
+    color: var(--text-color-dark);
+    font-size: 2rem;
+    margin: 10px 50px;
+    position: absolute;
+    top: 0;
+    right: 0;
+    display: none;
+}
+
+.overlay{
+    background-color: rgba(0, 0, 0, 0.616);
+    width:100vw ;
+    height: 100vh;
+    position: fixed;
+    top: 0;
+    display: none;
+    z-index: 200;
+}
+
+.menu-lateral{
+    height: 200vh;
+    position: fixed;
+    top: 0;
+    right: 0;
+    z-index: 9999;
+    width: 0vw;
+    overflow: hidden;
+    transition: 0.3s ease-in-out;
+    background-color: var(--background-header-dark);
+    padding: 30px 0px 0px 0px;
+}
+
+.menu-lateral nav ul{
+    flex-direction: column;
+    align-items: end; 
+    margin-top: 100px;
+}
+
+.menu-lateral nav ul li{
+    margin: 20px 0px;
+}
+
+.menu-lateral.open{
+    width: 35vw;
+}
+
+.menu-lateral.open ~ .overlay{
+    display: block;
+}
+
+
+.menu-lateral nav ul a{
+    margin:20px;
+    padding: 0px;
+}
+
+.bi-x-lg{
+    font-size: 1.6rem;
+    padding: 20px;
+}
+
+
+@media only screen and (max-width: 659px){
+    .menu{
+        display: block;
+    }
+    .pc{
+        display: none;
+    }
+
+    header{
+        height: 55px;
+    }
+}

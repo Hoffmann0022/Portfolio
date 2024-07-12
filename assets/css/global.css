@@ -1,0 +1,82 @@
+/* Kode mono */
+@import url('https://fonts.googleapis.com/css2?family=Kode+Mono:wght@400..700&family=Raleway:ital,wght@0,100..900;1,100..900&display=swap');
+
+/* Raleway */
+@import url('https://fonts.googleapis.com/css2?family=Raleway:ital,wght@0,100..900;1,100..900&display=swap');
+
+
+*{
+    margin: 0;
+    padding: 0;
+    border: none;
+    box-sizing: border-box;
+    font-family: "Raleway", sans-serif;
+    cursor: none;
+}
+
+:root{
+    --background-color-dark: #19274e;
+    --background-header-dark: #0f132e;
+    --text-color-dark: #e2dada ;
+    --primary-color-dark:#102257  ;
+    --primary-color-whigt: #e2d5d5 ; 
+    --secondary-color: #04133b ;
+    --tertiary-color: #1e2a53 ;
+
+    scroll-behavior: smooth;
+    transition: all .4s ease-in-out;
+}
+
+html{
+    scroll-behavior: smooth;
+    transition: all .4s ease-in-out;
+}
+
+body{
+    background-color: var(--background-color-dark);
+    color: var(--text-color-dark);
+}
+
+.cursor{
+    background-color: #fff;
+    width: 10px;
+    height: 10px;
+    outline: 2px solid #fff;
+    outline-offset: 13px;
+    border-radius: 50%;
+    position: absolute;
+    pointer-events: none;
+    transform: translate(-50%, -50%);
+    z-index: 1000;
+    mix-blend-mode: difference;
+}
+
+.highlight{
+    outline: 2px solid transparent;
+    width: 30px;
+    height: 30px;
+}
+
+/* Custom Scroll */
+
+::-webkit-scrollbar {
+    width: 10px;
+    background: var(--secondary-color);
+    transition: all .3s ease-in-out;
+}
+
+::-webkit-scrollbar-thumb {
+    background: var(--tertiary-color);
+    border-radius: 10px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+    background: var(--primary-color-dark);
+}
+
+@media (pointer: coarse	){
+    .cursor{
+        display: none;
+    }
+
+}
